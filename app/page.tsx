@@ -1,3 +1,9 @@
+import NormallCarousel from "@/Containers/NormalCarousel";
+
 export default function Home() {
-  return <div>فروشگاه کتاب</div>;
+  return (
+    <div className="con">
+      <NormallCarousel />
+    </div>
+  )
 }

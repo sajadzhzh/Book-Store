@@ -1,1 +1,27 @@
 @use "./Modules/header";
+@use "./Modules/containers";
+@use "./Modules/buttons";
+@use "./Modules/animations";
+@use "./Modules/carousel";
+
+
+.badge{
+    width: max-content;
+    padding-inline: calc(4 * var(--spacing));
+    font-size: 10px;
+    position: absolute;
+    bottom: -0.5rem;
+    right: 0;
+    border-radius: var(--border-rad);
+    color: var(--color-white);
+
+    &__orange{
+        background-color: var(--color-orange);
+    }
+    &__red{
+        background-color: var(--color-red);
+    }
+    &__green{
+        background-color: var(--color-green);
+    }
+}

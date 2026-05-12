@@ -1,31 +1,32 @@
 import Image from "next/image";
 import Link from "next/link";
 import Logo from "@/public/main_logo-1.png";
-import Input from "@/Components/Form/Input";
+import HeaderButtons from "./buttons";
+import HeaderSearch from "./search";
+import SubHeader from "./subHeader";
 
 export default function HeaderPartials() {
   return (
-    <header className="header">
-      <Link href="/" className="w-max">
-        <Image
-          src={Logo}
-          alt="Book_Uni"
-          loading="eager"
-          width={500}
-          className="header__logo"
-        />
-      </Link>
+    <div className="con border-b border-gray-200">
+      <header className="header ">
+        <div className="flex w-full justify-between items-center ">
+          <Link href="/">
+            <Image
+              src={Logo}
+              alt="Book_Uni"
+              loading="eager"
+              width={500}
+              className="header__logo"
+            />
+          </Link>
 
-      <div className="header__search__container">
-        <i className="bi bi-search"></i>
-        <Input
-          name="headerSearch"
-          styles="header__search"
-          placeholder="جستجو کتاب، نویسنده، موضوع..."
-        />
-      </div>
+          <HeaderSearch />
 
-      <div></div>
-    </header>
+          <HeaderButtons />
+        </div>
+
+        <SubHeader />
+      </header>
+    </div>
   );
 }
